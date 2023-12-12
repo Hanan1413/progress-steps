@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    background: rgb(233, 239, 250);
+}
+
+
+
+h2{
+    margin-top: 15%;
+} 
+
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 5px 10px;
+    cursor: pointer;
+  }
+
+   /* Disable button on the page and not allowed cursor to point  */
+  .button:disabled{
+      cursor: pointer;
+      opacity: 0.6;
+      cursor: not-allowed;
+  }
+
+/*  overall progress bar section includes the 
+progress bar its steps, bullets, and buttons. */
+.section{
+    text-align: center;
+    max-width: 400px;
+    margin:40px auto 0 auto;
+    padding: 40px;
+
+}
+
+
+/* For styling the contents of  progress bar. */
+#progressBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 150px auto;
+    margin-bottom: 40px;
+    transition: 0.4s ease;
+
+}
+
+
+.step{
+    text-align: center;
+}
+
+.text{
+    margin-bottom: 10px;
+    color: #000;
+}
+
+
+
+/* Styling bullets so when the user clicks the next button bullet needs
+ to show the transition for moving from step 1 to step 2 */
+
+
+
+.bullets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid  rgb(165, 162, 162);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    color: rgb(129, 121, 121);
+    transition-duration:  600ms;
+    position: relative;
+}
+
+.bullets-border{
+    border: 3px solid  green;
+}
+.bullets.completed{
+    color: rgb(49, 114, 139);
+    background: #fff;
+
+}
+
+.bullets.completed::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 77px;
+    background:green;
+    right: -81px;
+    bottom: 12px;
+    color:green;
+    border: 1px solid green;
+    transition: ease;
+
+
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    .section{
+        text-align: center;
+        max-width: 300px;
+    } }
